@@ -1,0 +1,1278 @@
+12:01:30,610 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:01:30,790 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:01:30 EST 2017]; root of context hierarchy
+12:01:30,851 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@fad74ee: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:01:30,877 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4bb4de6a] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'intertec.namevalidator.test.CheckUsernameTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+12:01:30,893 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:01:30 EST 2017]; root of context hierarchy
+12:01:30,893 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@fad74ee: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:10:44,950 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:10:45,111 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:10:45 EST 2017]; root of context hierarchy
+12:10:45,172 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@fad74ee: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:10:45,200 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4bb4de6a] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'intertec.namevalidator.test.CheckUsernameTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+12:10:45,215 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:10:45 EST 2017]; root of context hierarchy
+12:10:45,215 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@fad74ee: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:21:07,982 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:21:08,152 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@23ceabc1: startup date [Thu Mar 30 12:21:08 EST 2017]; root of context hierarchy
+12:21:08,214 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c46bcd4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:21:08,255 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@23ceabc1: startup date [Thu Mar 30 12:21:08 EST 2017]; root of context hierarchy
+12:21:08,256 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c46bcd4: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:30:44,134 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:30:44,298 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:30:44 EST 2017]; root of context hierarchy
+12:30:44,361 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:30:44,389 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ba18f1b] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'intertec.namevalidator.test.CheckUsernameTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+12:30:44,429 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:30:44 EST 2017]; root of context hierarchy
+12:30:44,430 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:31:33,648 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:31:33,815 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:31:33 EST 2017]; root of context hierarchy
+12:31:33,881 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:31:33,905 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ba18f1b] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'intertec.namevalidator.test.CheckUsernameTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+12:31:33,925 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:31:33 EST 2017]; root of context hierarchy
+12:31:33,925 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:33:12,853 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:33:13,037 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:33:13 EST 2017]; root of context hierarchy
+12:33:13,099 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:33:13,124 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ba18f1b] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'intertec.namevalidator.test.CheckUsernameTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: intertec.namevalidator.service.UtilityService intertec.namevalidator.test.CheckUsernameTest.utilityService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [intertec.namevalidator.service.UtilityService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=utilityService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+12:33:13,169 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@36d4b5c: startup date [Thu Mar 30 12:33:13 EST 2017]; root of context hierarchy
+12:33:13,169 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a1d6a08: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:34:12,739 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:34:12,906 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:34:12 EST 2017]; root of context hierarchy
+12:34:12,969 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3234e239: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:34:13,012 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:34:12 EST 2017]; root of context hierarchy
+12:34:13,013 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3234e239: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:36:35,636 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:36:35,786 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:36:36,049 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:36:36,153 INFO  [DefaultListableBeanFactory] Overriding bean definition for bean 'utilityService': replacing [Generic bean: class [intertec.namevalidator.service.UtilityService]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/roberto/prueba/namevalidator/target/classes/intertec/namevalidator/service/UtilityService.class]] with [Generic bean: class [intertec.namevalidator.service.UtilityService]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]]
+12:36:36,157 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:36:36 EST 2017]; root of context hierarchy
+12:36:36,373 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:36:36,446 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f3b5d16: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:36:36,863 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:36:36,873 INFO  [Environment] Hibernate 3.5.6-Final
+12:36:36,875 INFO  [Environment] hibernate.properties not found
+12:36:36,880 INFO  [Environment] Bytecode provider name : javassist
+12:36:36,885 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:36:36,990 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:36:36,996 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:36:37,046 INFO  [Configuration] Configured SessionFactory: null
+12:36:37,094 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:36:37,124 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:36:37,158 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:36:37,159 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:36:37,160 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:36:37,160 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:36:37,165 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:36:37,167 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:36:37,169 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:36:37,229 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:36:37,678 INFO  [ENGINE] Checkpoint start
+12:36:37,679 INFO  [ENGINE] checkpointClose start
+12:36:37,703 INFO  [ENGINE] checkpointClose end
+12:36:37,710 INFO  [ENGINE] Checkpoint end
+12:36:37,738 INFO  [ENGINE] Database closed
+12:36:37,948 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:36:37,948 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:36:37,969 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:36:37,976 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:36:37,977 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:36:37,978 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:36:37,978 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:36:37,978 INFO  [SettingsFactory] JDBC batch size: 15
+12:36:37,978 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:36:37,979 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:36:37,979 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:36:37,980 INFO  [SettingsFactory] Connection release mode: auto
+12:36:37,980 INFO  [SettingsFactory] Default batch fetch size: 1
+12:36:37,981 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:36:37,981 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:36:37,981 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:36:37,981 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:36:37,983 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:36:37,983 INFO  [SettingsFactory] Query language substitutions: {}
+12:36:37,983 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:36:37,983 INFO  [SettingsFactory] Second-level cache: enabled
+12:36:37,984 INFO  [SettingsFactory] Query cache: disabled
+12:36:37,984 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:36:37,984 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:36:37,984 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:36:37,988 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:36:37,989 INFO  [SettingsFactory] Statistics: disabled
+12:36:37,989 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:36:37,989 INFO  [SettingsFactory] Default entity-mode: pojo
+12:36:37,989 INFO  [SettingsFactory] Named query checking : enabled
+12:36:37,990 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:36:38,037 INFO  [SessionFactoryImpl] building session factory
+12:36:38,202 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:36:38,209 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:36:38,210 INFO  [SchemaUpdate] fetching database metadata
+12:36:38,218 INFO  [SchemaUpdate] updating schema
+12:36:38,232 INFO  [DatabaseMetadata] table not found: restrictedword
+12:36:38,239 INFO  [DatabaseMetadata] table not found: suggestedword
+12:36:38,245 INFO  [DatabaseMetadata] table not found: username
+12:36:38,251 INFO  [DatabaseMetadata] table not found: restrictedword
+12:36:38,257 INFO  [DatabaseMetadata] table not found: suggestedword
+12:36:38,263 INFO  [DatabaseMetadata] table not found: username
+12:36:38,266 INFO  [SchemaUpdate] schema update complete
+12:36:38,647 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@3dd69f5a] of Hibernate SessionFactory for HibernateTransactionManager
+12:36:38,702 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f3b5d16: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:36:38,708 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:36:38,708 INFO  [SessionFactoryImpl] closing
+12:36:38,734 INFO  [ENGINE] Database closed
+12:36:38,836 ERROR [TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@641856] to prepare test instance [null(intertec.namevalidator.test.CheckUsernameTest)]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'utilityService' defined in file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sessionFactory' of bean class [intertec.namevalidator.service.UtilityService]: Bean property 'sessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sessionFactory' of bean class [intertec.namevalidator.service.UtilityService]: Bean property 'sessionFactory' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1064)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:924)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:76)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1393)
+	... 45 more
+12:38:14,446 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:38:14,589 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:38:14,864 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:38:14,975 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:38:14 EST 2017]; root of context hierarchy
+12:38:15,139 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:38:15,200 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f3b5d16: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:38:15,560 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:38:15,570 INFO  [Environment] Hibernate 3.5.6-Final
+12:38:15,572 INFO  [Environment] hibernate.properties not found
+12:38:15,575 INFO  [Environment] Bytecode provider name : javassist
+12:38:15,579 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:38:15,664 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:38:15,672 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:38:15,725 INFO  [Configuration] Configured SessionFactory: null
+12:38:15,772 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:38:15,809 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:38:15,845 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:38:15,846 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:38:15,847 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:38:15,849 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:38:15,854 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:38:15,857 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:38:15,860 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:38:15,917 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:38:16,431 INFO  [ENGINE] Database closed
+12:38:16,605 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:38:16,605 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:38:16,624 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:38:16,632 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:38:16,634 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:38:16,634 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:38:16,635 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:38:16,635 INFO  [SettingsFactory] JDBC batch size: 15
+12:38:16,635 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:38:16,636 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:38:16,636 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:38:16,636 INFO  [SettingsFactory] Connection release mode: auto
+12:38:16,637 INFO  [SettingsFactory] Default batch fetch size: 1
+12:38:16,638 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:38:16,638 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:38:16,638 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:38:16,638 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:38:16,640 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:38:16,641 INFO  [SettingsFactory] Query language substitutions: {}
+12:38:16,641 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:38:16,641 INFO  [SettingsFactory] Second-level cache: enabled
+12:38:16,641 INFO  [SettingsFactory] Query cache: disabled
+12:38:16,641 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:38:16,642 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:38:16,642 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:38:16,647 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:38:16,648 INFO  [SettingsFactory] Statistics: disabled
+12:38:16,648 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:38:16,649 INFO  [SettingsFactory] Default entity-mode: pojo
+12:38:16,649 INFO  [SettingsFactory] Named query checking : enabled
+12:38:16,649 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:38:16,692 INFO  [SessionFactoryImpl] building session factory
+12:38:16,898 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:38:16,903 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:38:16,903 INFO  [SchemaUpdate] fetching database metadata
+12:38:16,916 INFO  [SchemaUpdate] updating schema
+12:38:16,990 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:38:16,990 INFO  [TableMetadata] columns: [word]
+12:38:16,990 INFO  [TableMetadata] foreign keys: []
+12:38:16,991 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:38:17,024 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:38:17,024 INFO  [TableMetadata] columns: [word]
+12:38:17,024 INFO  [TableMetadata] foreign keys: []
+12:38:17,025 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:38:17,061 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:38:17,062 INFO  [TableMetadata] columns: [name]
+12:38:17,062 INFO  [TableMetadata] foreign keys: []
+12:38:17,062 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:38:17,063 INFO  [SchemaUpdate] schema update complete
+12:38:17,414 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@21d5c1a0] of Hibernate SessionFactory for HibernateTransactionManager
+12:38:17,781 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:38:17,783 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:38:17,784 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:38:17,785 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:38:17,786 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:38:17,787 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:38:17,787 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:38:18,451 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:38:14 EST 2017]; root of context hierarchy
+12:38:18,452 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f3b5d16: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:38:18,464 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:38:18,468 INFO  [SessionFactoryImpl] closing
+12:38:18,494 INFO  [ENGINE] Database closed
+12:39:24,605 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:39:24,763 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:39:25,072 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:39:25,181 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:39:25 EST 2017]; root of context hierarchy
+12:39:25,339 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:39:25,403 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21507a04: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:39:25,788 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:39:25,803 INFO  [Environment] Hibernate 3.5.6-Final
+12:39:25,805 INFO  [Environment] hibernate.properties not found
+12:39:25,810 INFO  [Environment] Bytecode provider name : javassist
+12:39:25,814 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:39:25,905 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:39:25,912 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:39:25,969 INFO  [Configuration] Configured SessionFactory: null
+12:39:26,020 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:39:26,055 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:39:26,097 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:39:26,098 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:39:26,099 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:39:26,100 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:39:26,105 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:39:26,108 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:39:26,111 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:39:26,162 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:39:26,675 INFO  [ENGINE] Database closed
+12:39:26,842 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:39:26,843 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:39:26,865 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:39:26,874 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:39:26,876 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:39:26,876 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:39:26,876 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:39:26,876 INFO  [SettingsFactory] JDBC batch size: 15
+12:39:26,877 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:39:26,877 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:39:26,878 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:39:26,878 INFO  [SettingsFactory] Connection release mode: auto
+12:39:26,879 INFO  [SettingsFactory] Default batch fetch size: 1
+12:39:26,879 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:39:26,879 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:39:26,879 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:39:26,879 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:39:26,882 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:39:26,882 INFO  [SettingsFactory] Query language substitutions: {}
+12:39:26,883 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:39:26,883 INFO  [SettingsFactory] Second-level cache: enabled
+12:39:26,883 INFO  [SettingsFactory] Query cache: disabled
+12:39:26,883 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:39:26,883 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:39:26,884 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:39:26,888 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:39:26,889 INFO  [SettingsFactory] Statistics: disabled
+12:39:26,889 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:39:26,890 INFO  [SettingsFactory] Default entity-mode: pojo
+12:39:26,890 INFO  [SettingsFactory] Named query checking : enabled
+12:39:26,890 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:39:26,929 INFO  [SessionFactoryImpl] building session factory
+12:39:27,107 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:39:27,115 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:39:27,115 INFO  [SchemaUpdate] fetching database metadata
+12:39:27,128 INFO  [SchemaUpdate] updating schema
+12:39:27,197 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:39:27,197 INFO  [TableMetadata] columns: [word]
+12:39:27,197 INFO  [TableMetadata] foreign keys: []
+12:39:27,198 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:39:27,227 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:39:27,228 INFO  [TableMetadata] columns: [word]
+12:39:27,228 INFO  [TableMetadata] foreign keys: []
+12:39:27,228 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:39:27,265 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:39:27,265 INFO  [TableMetadata] columns: [name]
+12:39:27,265 INFO  [TableMetadata] foreign keys: []
+12:39:27,266 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:39:27,267 INFO  [SchemaUpdate] schema update complete
+12:39:27,706 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@2e5c7f0b] of Hibernate SessionFactory for HibernateTransactionManager
+12:39:28,141 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:39:28,142 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:39:28,142 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:39:28,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:39:28,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:39:28,144 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:39:28,144 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:39:28,979 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@3a82f6ef: startup date [Thu Mar 30 12:39:25 EST 2017]; root of context hierarchy
+12:39:28,980 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@21507a04: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:39:29,015 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:39:29,016 INFO  [SessionFactoryImpl] closing
+12:48:56,389 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:48:56,546 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:48:56,810 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:48:56,937 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:48:56 EST 2017]; root of context hierarchy
+12:48:57,137 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:48:57,200 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:48:57,551 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:48:57,561 INFO  [Environment] Hibernate 3.5.6-Final
+12:48:57,563 INFO  [Environment] hibernate.properties not found
+12:48:57,567 INFO  [Environment] Bytecode provider name : javassist
+12:48:57,572 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:48:57,670 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:48:57,678 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:48:57,738 INFO  [Configuration] Configured SessionFactory: null
+12:48:57,787 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:48:57,817 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:48:57,850 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:48:57,850 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:48:57,851 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:48:57,852 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:48:57,855 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:48:57,857 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:48:57,859 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:48:57,912 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:48:58,340 INFO  [ENGINE] checkpointClose start
+12:48:58,371 INFO  [ENGINE] checkpointClose end
+12:48:58,434 INFO  [ENGINE] Database closed
+12:48:58,607 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:48:58,607 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:48:58,626 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:48:58,635 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:48:58,636 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:48:58,636 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:48:58,636 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:48:58,637 INFO  [SettingsFactory] JDBC batch size: 15
+12:48:58,637 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:48:58,638 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:48:58,638 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:48:58,638 INFO  [SettingsFactory] Connection release mode: auto
+12:48:58,639 INFO  [SettingsFactory] Default batch fetch size: 1
+12:48:58,639 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:48:58,639 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:48:58,640 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:48:58,640 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:48:58,642 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:48:58,642 INFO  [SettingsFactory] Query language substitutions: {}
+12:48:58,643 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:48:58,643 INFO  [SettingsFactory] Second-level cache: enabled
+12:48:58,643 INFO  [SettingsFactory] Query cache: disabled
+12:48:58,643 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:48:58,643 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:48:58,644 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:48:58,649 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:48:58,650 INFO  [SettingsFactory] Statistics: disabled
+12:48:58,650 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:48:58,650 INFO  [SettingsFactory] Default entity-mode: pojo
+12:48:58,651 INFO  [SettingsFactory] Named query checking : enabled
+12:48:58,651 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:48:58,701 INFO  [SessionFactoryImpl] building session factory
+12:48:58,964 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:48:58,970 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:48:58,971 INFO  [SchemaUpdate] fetching database metadata
+12:48:58,984 INFO  [SchemaUpdate] updating schema
+12:48:59,055 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:48:59,056 INFO  [TableMetadata] columns: [word]
+12:48:59,056 INFO  [TableMetadata] foreign keys: []
+12:48:59,056 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:48:59,087 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:48:59,087 INFO  [TableMetadata] columns: [word]
+12:48:59,087 INFO  [TableMetadata] foreign keys: []
+12:48:59,088 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:48:59,131 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:48:59,132 INFO  [TableMetadata] columns: [name]
+12:48:59,132 INFO  [TableMetadata] foreign keys: []
+12:48:59,132 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:48:59,133 INFO  [SchemaUpdate] schema update complete
+12:48:59,571 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+12:49:00,007 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:49:00,007 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:49:00,008 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:49:00,008 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:49:00,009 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:49:00,010 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:49:00,010 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:49:00,748 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:48:56 EST 2017]; root of context hierarchy
+12:49:00,749 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:49:00,790 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:49:00,790 INFO  [SessionFactoryImpl] closing
+12:50:21,692 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:50:21,855 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:50:22,160 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:50:22,259 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:50:22 EST 2017]; root of context hierarchy
+12:50:22,435 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:50:22,498 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:50:22,862 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:50:22,872 INFO  [Environment] Hibernate 3.5.6-Final
+12:50:22,873 INFO  [Environment] hibernate.properties not found
+12:50:22,877 INFO  [Environment] Bytecode provider name : javassist
+12:50:22,880 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:50:22,976 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:50:22,983 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:50:23,036 INFO  [Configuration] Configured SessionFactory: null
+12:50:23,080 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:50:23,112 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:50:23,147 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:50:23,148 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:50:23,149 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:50:23,149 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:50:23,153 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:50:23,155 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:50:23,157 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:50:23,207 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:50:23,647 INFO  [ENGINE] checkpointClose start
+12:50:23,679 INFO  [ENGINE] checkpointClose end
+12:50:23,749 INFO  [ENGINE] Database closed
+12:50:23,934 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:50:23,934 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:50:23,957 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:50:23,969 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:50:23,971 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:50:23,971 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:50:23,971 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:50:23,971 INFO  [SettingsFactory] JDBC batch size: 15
+12:50:23,971 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:50:23,972 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:50:23,972 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:50:23,972 INFO  [SettingsFactory] Connection release mode: auto
+12:50:23,973 INFO  [SettingsFactory] Default batch fetch size: 1
+12:50:23,974 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:50:23,974 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:50:23,974 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:50:23,974 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:50:23,976 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:50:23,976 INFO  [SettingsFactory] Query language substitutions: {}
+12:50:23,976 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:50:23,977 INFO  [SettingsFactory] Second-level cache: enabled
+12:50:23,977 INFO  [SettingsFactory] Query cache: disabled
+12:50:23,977 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:50:23,977 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:50:23,977 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:50:23,982 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:50:23,983 INFO  [SettingsFactory] Statistics: disabled
+12:50:23,983 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:50:23,983 INFO  [SettingsFactory] Default entity-mode: pojo
+12:50:23,983 INFO  [SettingsFactory] Named query checking : enabled
+12:50:23,983 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:50:24,024 INFO  [SessionFactoryImpl] building session factory
+12:50:24,202 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:50:24,207 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:50:24,207 INFO  [SchemaUpdate] fetching database metadata
+12:50:24,216 INFO  [SchemaUpdate] updating schema
+12:50:24,292 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:50:24,292 INFO  [TableMetadata] columns: [word]
+12:50:24,292 INFO  [TableMetadata] foreign keys: []
+12:50:24,293 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:50:24,331 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:50:24,332 INFO  [TableMetadata] columns: [word]
+12:50:24,332 INFO  [TableMetadata] foreign keys: []
+12:50:24,332 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:50:24,368 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:50:24,368 INFO  [TableMetadata] columns: [name]
+12:50:24,369 INFO  [TableMetadata] foreign keys: []
+12:50:24,369 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:50:24,371 INFO  [SchemaUpdate] schema update complete
+12:50:24,758 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+12:50:25,125 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:50:25,126 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:50:25,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:50:25,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:50:25,128 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:50:25,129 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:50:25,129 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:50:25,900 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:50:22 EST 2017]; root of context hierarchy
+12:50:25,901 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:50:25,920 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:50:25,921 INFO  [SessionFactoryImpl] closing
+12:51:39,182 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:51:39,332 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:51:39,668 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:51:39,783 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:51:39 EST 2017]; root of context hierarchy
+12:51:39,954 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:51:40,017 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:51:40,387 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:51:40,397 INFO  [Environment] Hibernate 3.5.6-Final
+12:51:40,399 INFO  [Environment] hibernate.properties not found
+12:51:40,402 INFO  [Environment] Bytecode provider name : javassist
+12:51:40,406 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:51:40,517 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:51:40,527 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:51:40,592 INFO  [Configuration] Configured SessionFactory: null
+12:51:40,651 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:51:40,685 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:51:40,719 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:51:40,720 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:51:40,721 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:51:40,721 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:51:40,726 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:51:40,727 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:51:40,730 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:51:40,785 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:51:41,241 INFO  [ENGINE] checkpointClose start
+12:51:41,271 INFO  [ENGINE] checkpointClose end
+12:51:41,336 INFO  [ENGINE] Database closed
+12:51:41,518 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:51:41,519 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:51:41,550 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:51:41,558 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:51:41,559 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:51:41,560 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:51:41,560 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:51:41,560 INFO  [SettingsFactory] JDBC batch size: 15
+12:51:41,560 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:51:41,561 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:51:41,561 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:51:41,561 INFO  [SettingsFactory] Connection release mode: auto
+12:51:41,562 INFO  [SettingsFactory] Default batch fetch size: 1
+12:51:41,562 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:51:41,562 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:51:41,562 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:51:41,562 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:51:41,564 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:51:41,564 INFO  [SettingsFactory] Query language substitutions: {}
+12:51:41,564 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:51:41,564 INFO  [SettingsFactory] Second-level cache: enabled
+12:51:41,565 INFO  [SettingsFactory] Query cache: disabled
+12:51:41,565 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:51:41,565 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:51:41,565 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:51:41,569 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:51:41,569 INFO  [SettingsFactory] Statistics: disabled
+12:51:41,569 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:51:41,570 INFO  [SettingsFactory] Default entity-mode: pojo
+12:51:41,570 INFO  [SettingsFactory] Named query checking : enabled
+12:51:41,570 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:51:41,611 INFO  [SessionFactoryImpl] building session factory
+12:51:41,787 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:51:41,792 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:51:41,793 INFO  [SchemaUpdate] fetching database metadata
+12:51:41,802 INFO  [SchemaUpdate] updating schema
+12:51:41,872 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:51:41,872 INFO  [TableMetadata] columns: [word]
+12:51:41,872 INFO  [TableMetadata] foreign keys: []
+12:51:41,872 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:51:41,905 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:51:41,906 INFO  [TableMetadata] columns: [word]
+12:51:41,906 INFO  [TableMetadata] foreign keys: []
+12:51:41,906 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:51:41,938 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:51:41,938 INFO  [TableMetadata] columns: [name]
+12:51:41,938 INFO  [TableMetadata] foreign keys: []
+12:51:41,939 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:51:41,940 INFO  [SchemaUpdate] schema update complete
+12:51:42,383 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+12:51:42,845 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:51:42,846 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:51:42,847 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:51:42,848 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:51:42,849 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:51:42,849 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:51:42,850 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:51:43,748 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:51:39 EST 2017]; root of context hierarchy
+12:51:43,749 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:51:43,766 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:51:43,767 INFO  [SessionFactoryImpl] closing
+12:57:19,079 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:57:19,241 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:57:19,549 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:57:19,651 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:57:19 EST 2017]; root of context hierarchy
+12:57:19,829 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:57:19,901 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:57:20,276 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:57:20,286 INFO  [Environment] Hibernate 3.5.6-Final
+12:57:20,288 INFO  [Environment] hibernate.properties not found
+12:57:20,292 INFO  [Environment] Bytecode provider name : javassist
+12:57:20,297 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:57:20,388 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:57:20,398 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:57:20,455 INFO  [Configuration] Configured SessionFactory: null
+12:57:20,506 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:57:20,538 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:57:20,571 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:57:20,571 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:57:20,573 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:57:20,573 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:57:20,577 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:57:20,578 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:57:20,580 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:57:20,631 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:57:21,105 INFO  [ENGINE] checkpointClose start
+12:57:21,138 INFO  [ENGINE] checkpointClose end
+12:57:21,196 INFO  [ENGINE] Database closed
+12:57:21,369 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:57:21,369 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:57:21,388 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:57:21,396 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:57:21,397 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:57:21,397 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:57:21,397 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:57:21,398 INFO  [SettingsFactory] JDBC batch size: 15
+12:57:21,398 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:57:21,398 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:57:21,398 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:57:21,399 INFO  [SettingsFactory] Connection release mode: auto
+12:57:21,399 INFO  [SettingsFactory] Default batch fetch size: 1
+12:57:21,399 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:57:21,400 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:57:21,400 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:57:21,400 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:57:21,401 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:57:21,402 INFO  [SettingsFactory] Query language substitutions: {}
+12:57:21,402 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:57:21,402 INFO  [SettingsFactory] Second-level cache: enabled
+12:57:21,402 INFO  [SettingsFactory] Query cache: disabled
+12:57:21,402 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:57:21,402 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:57:21,402 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:57:21,406 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:57:21,407 INFO  [SettingsFactory] Statistics: disabled
+12:57:21,407 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:57:21,407 INFO  [SettingsFactory] Default entity-mode: pojo
+12:57:21,407 INFO  [SettingsFactory] Named query checking : enabled
+12:57:21,407 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:57:21,449 INFO  [SessionFactoryImpl] building session factory
+12:57:21,616 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:57:21,621 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:57:21,621 INFO  [SchemaUpdate] fetching database metadata
+12:57:21,630 INFO  [SchemaUpdate] updating schema
+12:57:21,704 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:57:21,705 INFO  [TableMetadata] columns: [word]
+12:57:21,705 INFO  [TableMetadata] foreign keys: []
+12:57:21,705 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:57:21,733 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:57:21,733 INFO  [TableMetadata] columns: [word]
+12:57:21,733 INFO  [TableMetadata] foreign keys: []
+12:57:21,733 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:57:21,761 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:57:21,762 INFO  [TableMetadata] columns: [name]
+12:57:21,762 INFO  [TableMetadata] foreign keys: []
+12:57:21,762 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:57:21,763 INFO  [SchemaUpdate] schema update complete
+12:57:22,194 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+12:57:22,597 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:57:22,597 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:57:22,598 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:57:22,598 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:57:22,598 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:57:22,599 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:57:22,599 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:57:23,392 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:57:19 EST 2017]; root of context hierarchy
+12:57:23,393 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:57:23,427 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:57:23,428 INFO  [SessionFactoryImpl] closing
+12:57:59,714 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+12:57:59,885 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+12:58:00,179 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+12:58:00,287 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:58:00 EST 2017]; root of context hierarchy
+12:58:00,479 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+12:58:00,551 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:58:00,904 INFO  [Version] Hibernate Annotations 3.5.6-Final
+12:58:00,914 INFO  [Environment] Hibernate 3.5.6-Final
+12:58:00,916 INFO  [Environment] hibernate.properties not found
+12:58:00,919 INFO  [Environment] Bytecode provider name : javassist
+12:58:00,922 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+12:58:01,018 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+12:58:01,027 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+12:58:01,080 INFO  [Configuration] Configured SessionFactory: null
+12:58:01,119 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+12:58:01,149 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+12:58:01,182 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+12:58:01,182 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+12:58:01,183 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+12:58:01,184 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+12:58:01,188 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+12:58:01,190 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+12:58:01,192 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+12:58:01,243 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+12:58:01,691 INFO  [ENGINE] checkpointClose start
+12:58:01,718 INFO  [ENGINE] checkpointClose end
+12:58:01,790 INFO  [ENGINE] Database closed
+12:58:01,966 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+12:58:01,966 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+12:58:01,985 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+12:58:01,996 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+12:58:01,998 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+12:58:01,999 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+12:58:01,999 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+12:58:01,999 INFO  [SettingsFactory] JDBC batch size: 15
+12:58:01,999 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+12:58:02,000 INFO  [SettingsFactory] Scrollable result sets: enabled
+12:58:02,001 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+12:58:02,001 INFO  [SettingsFactory] Connection release mode: auto
+12:58:02,002 INFO  [SettingsFactory] Default batch fetch size: 1
+12:58:02,002 INFO  [SettingsFactory] Generate SQL with comments: disabled
+12:58:02,002 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+12:58:02,002 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+12:58:02,003 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+12:58:02,005 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+12:58:02,006 INFO  [SettingsFactory] Query language substitutions: {}
+12:58:02,006 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+12:58:02,006 INFO  [SettingsFactory] Second-level cache: enabled
+12:58:02,006 INFO  [SettingsFactory] Query cache: disabled
+12:58:02,007 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+12:58:02,007 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+12:58:02,007 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+12:58:02,013 INFO  [SettingsFactory] Echoing all SQL to stdout
+12:58:02,015 INFO  [SettingsFactory] Statistics: disabled
+12:58:02,015 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+12:58:02,016 INFO  [SettingsFactory] Default entity-mode: pojo
+12:58:02,016 INFO  [SettingsFactory] Named query checking : enabled
+12:58:02,018 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+12:58:02,064 INFO  [SessionFactoryImpl] building session factory
+12:58:02,236 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+12:58:02,241 INFO  [SchemaUpdate] Running hbm2ddl schema update
+12:58:02,241 INFO  [SchemaUpdate] fetching database metadata
+12:58:02,249 INFO  [SchemaUpdate] updating schema
+12:58:02,312 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+12:58:02,313 INFO  [TableMetadata] columns: [word]
+12:58:02,313 INFO  [TableMetadata] foreign keys: []
+12:58:02,314 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+12:58:02,346 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+12:58:02,347 INFO  [TableMetadata] columns: [word]
+12:58:02,348 INFO  [TableMetadata] foreign keys: []
+12:58:02,348 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+12:58:02,380 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+12:58:02,380 INFO  [TableMetadata] columns: [name]
+12:58:02,381 INFO  [TableMetadata] foreign keys: []
+12:58:02,381 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+12:58:02,382 INFO  [SchemaUpdate] schema update complete
+12:58:02,842 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+12:58:03,222 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+12:58:03,223 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+12:58:03,224 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+12:58:03,224 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+12:58:03,225 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+12:58:03,225 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+12:58:03,226 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+12:58:04,156 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 12:58:00 EST 2017]; root of context hierarchy
+12:58:04,159 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+12:58:04,205 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+12:58:04,205 INFO  [SessionFactoryImpl] closing
+13:02:56,915 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+13:02:57,082 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+13:02:57,383 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+13:02:57,506 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:02:57 EST 2017]; root of context hierarchy
+13:02:57,679 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+13:02:57,746 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:02:58,107 INFO  [Version] Hibernate Annotations 3.5.6-Final
+13:02:58,120 INFO  [Environment] Hibernate 3.5.6-Final
+13:02:58,123 INFO  [Environment] hibernate.properties not found
+13:02:58,128 INFO  [Environment] Bytecode provider name : javassist
+13:02:58,133 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+13:02:58,231 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+13:02:58,237 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+13:02:58,291 INFO  [Configuration] Configured SessionFactory: null
+13:02:58,348 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+13:02:58,394 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+13:02:58,431 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+13:02:58,432 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+13:02:58,433 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+13:02:58,433 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+13:02:58,437 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+13:02:58,439 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+13:02:58,441 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+13:02:58,509 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+13:02:58,979 INFO  [ENGINE] checkpointClose start
+13:02:59,006 INFO  [ENGINE] checkpointClose end
+13:02:59,078 INFO  [ENGINE] Database closed
+13:02:59,249 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+13:02:59,249 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+13:02:59,270 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+13:02:59,278 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+13:02:59,279 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+13:02:59,279 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+13:02:59,279 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+13:02:59,280 INFO  [SettingsFactory] JDBC batch size: 15
+13:02:59,280 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+13:02:59,280 INFO  [SettingsFactory] Scrollable result sets: enabled
+13:02:59,281 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+13:02:59,281 INFO  [SettingsFactory] Connection release mode: auto
+13:02:59,282 INFO  [SettingsFactory] Default batch fetch size: 1
+13:02:59,282 INFO  [SettingsFactory] Generate SQL with comments: disabled
+13:02:59,282 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+13:02:59,282 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+13:02:59,282 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+13:02:59,284 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+13:02:59,284 INFO  [SettingsFactory] Query language substitutions: {}
+13:02:59,284 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+13:02:59,284 INFO  [SettingsFactory] Second-level cache: enabled
+13:02:59,284 INFO  [SettingsFactory] Query cache: disabled
+13:02:59,285 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+13:02:59,285 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+13:02:59,285 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+13:02:59,288 INFO  [SettingsFactory] Echoing all SQL to stdout
+13:02:59,289 INFO  [SettingsFactory] Statistics: disabled
+13:02:59,289 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+13:02:59,290 INFO  [SettingsFactory] Default entity-mode: pojo
+13:02:59,290 INFO  [SettingsFactory] Named query checking : enabled
+13:02:59,290 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+13:02:59,325 INFO  [SessionFactoryImpl] building session factory
+13:02:59,509 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+13:02:59,515 INFO  [SchemaUpdate] Running hbm2ddl schema update
+13:02:59,515 INFO  [SchemaUpdate] fetching database metadata
+13:02:59,524 INFO  [SchemaUpdate] updating schema
+13:02:59,589 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+13:02:59,589 INFO  [TableMetadata] columns: [word]
+13:02:59,590 INFO  [TableMetadata] foreign keys: []
+13:02:59,590 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+13:02:59,622 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+13:02:59,622 INFO  [TableMetadata] columns: [word]
+13:02:59,622 INFO  [TableMetadata] foreign keys: []
+13:02:59,622 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+13:02:59,652 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+13:02:59,652 INFO  [TableMetadata] columns: [name]
+13:02:59,652 INFO  [TableMetadata] foreign keys: []
+13:02:59,652 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+13:02:59,653 INFO  [SchemaUpdate] schema update complete
+13:03:00,065 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+13:03:00,410 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+13:03:00,410 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+13:03:00,411 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+13:03:00,411 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+13:03:00,412 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+13:03:00,412 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+13:03:00,413 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+13:03:01,163 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:02:57 EST 2017]; root of context hierarchy
+13:03:01,165 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:03:01,199 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+13:03:01,200 INFO  [SessionFactoryImpl] closing
+13:03:34,793 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+13:03:34,956 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+13:03:35,252 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+13:03:35,354 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:03:35 EST 2017]; root of context hierarchy
+13:03:35,528 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+13:03:35,587 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:03:35,950 INFO  [Version] Hibernate Annotations 3.5.6-Final
+13:03:35,960 INFO  [Environment] Hibernate 3.5.6-Final
+13:03:35,962 INFO  [Environment] hibernate.properties not found
+13:03:35,965 INFO  [Environment] Bytecode provider name : javassist
+13:03:35,969 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+13:03:36,053 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+13:03:36,059 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+13:03:36,113 INFO  [Configuration] Configured SessionFactory: null
+13:03:36,158 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+13:03:36,189 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+13:03:36,222 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+13:03:36,222 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+13:03:36,223 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+13:03:36,224 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+13:03:36,228 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+13:03:36,230 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+13:03:36,232 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+13:03:36,283 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+13:03:36,725 INFO  [ENGINE] checkpointClose start
+13:03:36,751 INFO  [ENGINE] checkpointClose end
+13:03:36,806 INFO  [ENGINE] Database closed
+13:03:37,000 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+13:03:37,001 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+13:03:37,021 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+13:03:37,029 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+13:03:37,031 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+13:03:37,031 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+13:03:37,032 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+13:03:37,032 INFO  [SettingsFactory] JDBC batch size: 15
+13:03:37,032 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+13:03:37,033 INFO  [SettingsFactory] Scrollable result sets: enabled
+13:03:37,033 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+13:03:37,034 INFO  [SettingsFactory] Connection release mode: auto
+13:03:37,035 INFO  [SettingsFactory] Default batch fetch size: 1
+13:03:37,035 INFO  [SettingsFactory] Generate SQL with comments: disabled
+13:03:37,035 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+13:03:37,035 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+13:03:37,035 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+13:03:37,038 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+13:03:37,038 INFO  [SettingsFactory] Query language substitutions: {}
+13:03:37,038 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+13:03:37,038 INFO  [SettingsFactory] Second-level cache: enabled
+13:03:37,038 INFO  [SettingsFactory] Query cache: disabled
+13:03:37,039 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+13:03:37,039 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+13:03:37,039 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+13:03:37,044 INFO  [SettingsFactory] Echoing all SQL to stdout
+13:03:37,045 INFO  [SettingsFactory] Statistics: disabled
+13:03:37,045 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+13:03:37,045 INFO  [SettingsFactory] Default entity-mode: pojo
+13:03:37,045 INFO  [SettingsFactory] Named query checking : enabled
+13:03:37,045 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+13:03:37,082 INFO  [SessionFactoryImpl] building session factory
+13:03:37,248 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+13:03:37,253 INFO  [SchemaUpdate] Running hbm2ddl schema update
+13:03:37,254 INFO  [SchemaUpdate] fetching database metadata
+13:03:37,262 INFO  [SchemaUpdate] updating schema
+13:03:37,332 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+13:03:37,333 INFO  [TableMetadata] columns: [word]
+13:03:37,333 INFO  [TableMetadata] foreign keys: []
+13:03:37,333 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+13:03:37,362 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+13:03:37,363 INFO  [TableMetadata] columns: [word]
+13:03:37,363 INFO  [TableMetadata] foreign keys: []
+13:03:37,363 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+13:03:37,393 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+13:03:37,393 INFO  [TableMetadata] columns: [name]
+13:03:37,394 INFO  [TableMetadata] foreign keys: []
+13:03:37,394 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+13:03:37,395 INFO  [SchemaUpdate] schema update complete
+13:03:37,795 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+13:03:38,204 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+13:03:38,207 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+13:03:38,207 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+13:03:38,208 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+13:03:38,209 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+13:03:38,210 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+13:03:38,211 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+13:03:39,116 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:03:35 EST 2017]; root of context hierarchy
+13:03:39,117 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:03:39,160 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+13:03:39,160 INFO  [SessionFactoryImpl] closing
+13:05:09,714 INFO  [TestContextManager] @TestExecutionListeners is not present for class [class intertec.namevalidator.test.CheckUsernameTest]: using defaults.
+13:05:09,872 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-basic-context-test.xml]
+13:05:10,157 INFO  [XmlBeanDefinitionReader] Loading XML bean definitions from file [/home/roberto/prueba/namevalidator/target/test-classes/spring-persistence-context-test.xml]
+13:05:10,261 INFO  [GenericApplicationContext] Refreshing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:05:10 EST 2017]; root of context hierarchy
+13:05:10,433 INFO  [PropertyPlaceholderConfigurer] Loading properties file from class path resource [hsqldb.properties]
+13:05:10,503 INFO  [DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:05:10,897 INFO  [Version] Hibernate Annotations 3.5.6-Final
+13:05:10,907 INFO  [Environment] Hibernate 3.5.6-Final
+13:05:10,908 INFO  [Environment] hibernate.properties not found
+13:05:10,912 INFO  [Environment] Bytecode provider name : javassist
+13:05:10,915 INFO  [Environment] using JDK 1.4 java.sql.Timestamp handling
+13:05:11,008 INFO  [Version] Hibernate Commons Annotations 3.2.0.Final
+13:05:11,017 INFO  [Configuration] configuring from url: file:/home/roberto/prueba/namevalidator/target/test-classes/hibernate.cfg.xml
+13:05:11,069 INFO  [Configuration] Configured SessionFactory: null
+13:05:11,121 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.RestrictedWord
+13:05:11,151 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.RestrictedWord on table restrictedword
+13:05:11,185 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.Username
+13:05:11,185 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.Username on table username
+13:05:11,187 INFO  [AnnotationBinder] Binding entity from annotated class: intertec.namevalidator.model.SuggestedWord
+13:05:11,187 INFO  [EntityBinder] Bind entity intertec.namevalidator.model.SuggestedWord on table suggestedword
+13:05:11,191 INFO  [AnnotationConfiguration] Hibernate Validator not found: ignoring
+13:05:11,193 INFO  [AnnotationSessionFactoryBean] Building new Hibernate SessionFactory
+13:05:11,195 INFO  [HibernateSearchEventListenerRegister] Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+13:05:11,245 INFO  [ConnectionProviderFactory] Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+13:05:11,695 INFO  [ENGINE] checkpointClose start
+13:05:11,720 INFO  [ENGINE] checkpointClose end
+13:05:11,772 INFO  [ENGINE] Database closed
+13:05:11,949 INFO  [SettingsFactory] RDBMS: HSQL Database Engine, version: 2.2.6
+13:05:11,949 INFO  [SettingsFactory] JDBC driver: HSQL Database Engine Driver, version: 2.2.6
+13:05:11,973 INFO  [Dialect] Using dialect: org.hibernate.dialect.HSQLDialect
+13:05:11,986 INFO  [TransactionFactoryFactory] Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+13:05:11,988 INFO  [TransactionManagerLookupFactory] No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+13:05:11,988 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): disabled
+13:05:11,988 INFO  [SettingsFactory] Automatic session close at end of transaction: disabled
+13:05:11,988 INFO  [SettingsFactory] JDBC batch size: 15
+13:05:11,988 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+13:05:11,989 INFO  [SettingsFactory] Scrollable result sets: enabled
+13:05:11,990 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+13:05:11,990 INFO  [SettingsFactory] Connection release mode: auto
+13:05:11,991 INFO  [SettingsFactory] Default batch fetch size: 1
+13:05:11,991 INFO  [SettingsFactory] Generate SQL with comments: disabled
+13:05:11,993 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+13:05:11,994 INFO  [SettingsFactory] Order SQL inserts for batching: disabled
+13:05:11,994 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+13:05:11,998 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+13:05:11,998 INFO  [SettingsFactory] Query language substitutions: {}
+13:05:11,998 INFO  [SettingsFactory] JPA-QL strict compliance: disabled
+13:05:11,999 INFO  [SettingsFactory] Second-level cache: enabled
+13:05:12,002 INFO  [SettingsFactory] Query cache: disabled
+13:05:12,002 INFO  [SettingsFactory] Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+13:05:12,003 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+13:05:12,003 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+13:05:12,008 INFO  [SettingsFactory] Echoing all SQL to stdout
+13:05:12,009 INFO  [SettingsFactory] Statistics: disabled
+13:05:12,010 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+13:05:12,010 INFO  [SettingsFactory] Default entity-mode: pojo
+13:05:12,010 INFO  [SettingsFactory] Named query checking : enabled
+13:05:12,011 INFO  [SettingsFactory] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+13:05:12,064 INFO  [SessionFactoryImpl] building session factory
+13:05:12,252 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+13:05:12,259 INFO  [SchemaUpdate] Running hbm2ddl schema update
+13:05:12,259 INFO  [SchemaUpdate] fetching database metadata
+13:05:12,268 INFO  [SchemaUpdate] updating schema
+13:05:12,330 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.RESTRICTEDWORD
+13:05:12,330 INFO  [TableMetadata] columns: [word]
+13:05:12,330 INFO  [TableMetadata] foreign keys: []
+13:05:12,331 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10031_10032]
+13:05:12,361 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.SUGGESTEDWORD
+13:05:12,362 INFO  [TableMetadata] columns: [word]
+13:05:12,362 INFO  [TableMetadata] foreign keys: []
+13:05:12,362 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10034_10035]
+13:05:12,391 INFO  [TableMetadata] table found: PUBLIC.PUBLIC.USERNAME
+13:05:12,391 INFO  [TableMetadata] columns: [name]
+13:05:12,391 INFO  [TableMetadata] foreign keys: []
+13:05:12,391 INFO  [TableMetadata] indexes: [sys_idx_sys_pk_10037_10038]
+13:05:12,392 INFO  [SchemaUpdate] schema update complete
+13:05:12,759 INFO  [HibernateTransactionManager] Using DataSource [org.apache.commons.dbcp.BasicDataSource@1eef9aef] of Hibernate SessionFactory for HibernateTransactionManager
+13:05:13,159 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addUsername()
+13:05:13,161 INFO  [RequestMappingHandlerMapping] Mapped "{[/addUsername.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addUsername(intertec.namevalidator.model.Username,org.springframework.validation.Errors)
+13:05:13,162 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addRestrictedWord(intertec.namevalidator.model.RestrictedWord,org.springframework.validation.Errors)
+13:05:13,163 INFO  [RequestMappingHandlerMapping] Mapped "{[/addRestrictedWord.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String intertec.namevalidator.web.UsernameController.addRestrictedWord()
+13:05:13,166 INFO  [RequestMappingHandlerMapping] Mapped "{[/allUsernames.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allUsernames()
+13:05:13,167 INFO  [RequestMappingHandlerMapping] Mapped "{[/allRestrictedWords.htm],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.allRestrictedWords()
+13:05:13,168 INFO  [RequestMappingHandlerMapping] Mapped "{[/addSuggestion.htm],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView intertec.namevalidator.web.UsernameController.addSuggestions(java.lang.String)
+13:05:13,963 INFO  [GenericApplicationContext] Closing org.springframework.context.support.GenericApplicationContext@6d00a15d: startup date [Thu Mar 30 13:05:10 EST 2017]; root of context hierarchy
+13:05:13,965 INFO  [DefaultListableBeanFactory] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@436a4e4b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,prepareDataService,utilityService,usernameController,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,webMethods,serivceMethods,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,txAdvice,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+13:05:13,995 INFO  [AnnotationSessionFactoryBean] Closing Hibernate SessionFactory
+13:05:13,995 INFO  [SessionFactoryImpl] closing

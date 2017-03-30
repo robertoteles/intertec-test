@@ -1,0 +1,1 @@
+<span id="footer">namevalidator by <a href="http://www.robertoparra.com">Roberto Parra</a></span>

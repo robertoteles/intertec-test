@@ -1,0 +1,11 @@
+# git ignore
+.project
+.buildpath
+.metadata
+data/**/*
+export/**
+export/**/*
+*.tmp
+*.bak
+*.swp
+.settings/
